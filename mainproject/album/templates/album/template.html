@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Osori Website Study</title>
+  </head>
+  <body>
+  <header>
+  <h1>HTML Tutorial for Osori website</h1>
+  <h3>오소리 웹사이트 스터디 두번째 시간</h3>
+	</header>
+	<nav>
+		<ul>
+			<li>  github repo <a href="https://github.com/CameliaOvO/osori_html" target="_blank">바로가기</a>
+</li>
+      <li> 메인 페이지 <a href="{% url 'practice1' %}" >바로가기</a></li>
+			<li> 첫번째 과제 <a href="{% url 'assignment1'%}" >바로가기</a></li>
+			<li> 두번째 과제 <a href="{% url 'assignment2'%}" >바로가기</a></li>
+			<li> 세번째 과제 <a href="{% url 'assignment3'%}" >바로가기</a></li>
+		</ul>
+	</nav>
+            {% block content %}
+            {% endblock %}
+<!--
+  <footer>
+  	Copyright(C)2017. All rights reserved by Camelia
+  </footer> -->
+  </body>
+</html>

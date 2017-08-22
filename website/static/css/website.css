@@ -1,0 +1,51 @@
+.dongmoon{
+	color :green;
+	text-align:right;
+	margin-right:100px;
+}
+.topmenu{
+	text-align:right;
+	margin-right:100px;
+}
+.left_nav{
+	float:left;
+	margin-right: 100px;
+}
+.topnav{
+	text-align: center;
+}
+.topnav ul{
+	list-style-type: none;
+}
+
+.topnav li{
+	display:inline;
+	padding-right:10px;
+	padding-left:10px;
+}
+.logo{
+	float:left;
+	margin-left:20px;
+}
+.copyright{
+	margin:auto;
+}
+.tboard{
+	margin:10px;
+}
+.tboard th{
+	background-color:#FF92B1;
+	color: #fff;
+}
+.tboard tr:nth-child(even){
+	background-color:#ddd;
+}
+.tboard tr:nth-child(odd){
+	background-color:#fff0f1;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	color : orange;
+}

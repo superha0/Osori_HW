@@ -1,0 +1,61 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		OSORI website CSS STUDY
+	</title>
+	<link rel="stylesheet" href="{% static 'css/website.css' %}">
+</head>
+<body>
+<div id = "all_body">
+<header>
+
+	<div class="logo">
+		<h1>
+			오소리
+		</h1>
+	</div>
+	<div class = "dongmoon">
+		지금 동방 문은 <span>열림</span>
+	</div>
+
+	<div class = "topmenu">	
+		<a href="{%url 'index' %}"> login</a>
+		<a href="{%url 'index' %}">오시는 길 </a>
+
+	</div>
+
+</header>
+
+<nav class = "topnav">
+	<ul>
+		<li>동아리 소개</li>
+		<li>프로젝트 팀 내역</li>
+		<li><a href="{% url 'test_board' %}">게시판</a></li>
+		<li>사진첩</li>
+	</ul>
+
+</nav>
+
+<br>
+<div id="container">
+
+
+{% block content %}
+{% endblock %}
+
+</div>
+<br>
+<br>
+<footer>
+	<div class = "copyright">
+	COPYRIGHT(C) 2017. All rights reserved by OSORI
+	</div>
+
+
+</footer>
+</div>
+</body>
+</html>

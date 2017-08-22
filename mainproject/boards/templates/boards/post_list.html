@@ -1,0 +1,38 @@
+{% extends 'boards/base.html' %}
+{% block content %}
+
+<table border="1">
+<tr>
+<th> 글 번호 </th>
+<th> 제목 </th>
+<th> 작성일 </th>
+<th> 댓글 수 </th>
+<th> 조회수 </th>
+</tr>
+
+	{% for post in posts %}
+<tr>
+<td> {{post.pk}} </td>
+<td> <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></td>
+<td> {{ post.published_date }} </td>
+<td> {{ post.comments.count }}</td>
+<td> {{ post.view_count }} </td>
+</tr>
+	{% endfor %}
+	</table>
+	<div class="pagination">
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}

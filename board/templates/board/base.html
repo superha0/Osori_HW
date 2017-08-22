@@ -1,0 +1,99 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		OSORI website JavaScript STUDY
+	</title>
+	<link rel="stylesheet" href="{% static 'css/board.css' %}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+
+</head>
+<body>
+<div id = "all_body">
+<header>
+	<div class = "dongmoon">
+
+		 <span id="time">현재시간</span>
+		<input type="text" id="dpTime" value="" readonly=""></input>
+		<span id="dongmooncheck">동방 문은 <span class="check">열림</span></span>
+	</div>
+
+	<h1>
+		오소리
+	</h1>
+
+	<div class = "topmenu">
+		<a href="{%url 'index' %}"> login</a>
+		<a href="{%url 'index' %}">오시는 길 </a>
+	</div>
+</header>
+
+<nav class = "topnav">
+	<ul>
+		<li>동아리 소개</li>
+		
+		<span class="dropdown1">프로젝트 팀 내역  
+			<div class="dropdown-content1">
+			<p class="smenu">진행중인 프로젝트</p>
+			<p class="smenu">완료된 프로젝트</p>
+			</div>
+		</span>
+
+		<span class="dropdown2">게시판
+		<div class="dropdown-content2">
+			<p class="smenu">공지사항</p>
+			<p class="smenu">자유게시판</p>
+			<p class="smenu">정보게시판</p>
+			<p class="smenu">Q&amp;A게시판</p>
+			</div>
+		</span>
+		<li>사진첩</li>
+	</ul>
+
+</nav>
+
+<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="100">
+	<img src="https://dummyimage.com/600x400/eee/fff">
+	<img src="https://dummyimage.com/600x400/ddd/fff">
+	<img src="https://dummyimage.com/600x400/000/fff">
+	<img src="https://dummyimage.com/600x400/777/fff">
+	<img src="https://dummyimage.com/600x400/555/fff">
+</div>
+
+
+<br>
+<div id="container">
+
+
+{% block content %}
+{% endblock %}
+
+</div>
+<br>
+<br>
+<footer>
+	<div class = "copyright">
+	COPYRIGHT(C) 2017. All rights reserved by OSORI
+	</div>
+
+
+</footer>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+function printTime(){
+ var time =new Date();
+ var now = time.getHours()+":"+time.getMinutes()
+     +":"+time.getSeconds();
+ 
+ document.getElementById("dpTime").value = now;
+  
+}
+window.onload = function() {     // 페이지가 로딩되면 실행
+    printTime();
+}
+setInterval("printTime()",1000);
+</script>

@@ -1,0 +1,79 @@
+{% extends 'website/base.html' %}
+{% block content %}
+<nav class = "left_nav">
+<ul>
+	<li><a href="{%url 'test_board'%}">공지 게시판</a></li>
+	<li>자유 게시판</li>
+	<li>정보 게시판</li>
+	<li>Q&amp;A 게시판</li>
+</ul>
+</nav>
+<article>
+	<table class = "tboard">
+	<thead>
+		<tr>
+			<th scope="col" align="center">구분</th>
+			<th scope="col" align="center">title</th>
+			<th scope="col" align="center">published date</th>
+			<th scope="col" align="center">comments</th>
+		</tr>
+	</thead>
+	<tbody align="center">
+
+		<tr>
+			<th scope="row"> 7 </th>
+			<td><a href="{% url 'index' %}">가장 최근 게시글입니다</a></td>
+			<td>2017-07-20</td>
+			<td> 0 </td>
+		</tr>
+		<tr>
+			<th scope="row"> 6 </th>
+			<td><a href="{% url 'index' %}">게시글을 클릭하면 index.html로 돌아갑니다</a></td>
+			<td>2017-07-18</td>
+			<td> 0 </td>
+		</tr>
+
+		<tr>
+			<th scope="row"> 5 </th>
+			<td><a href="{% url 'index' %}">굳이 이 페이지를 static하게 만든 이유라면?</a></td>
+			<td>2017-07-17</td>
+			<td> 0 </td>
+		</tr>
+
+		<tr>
+			<th scope="row"> 4 </th>
+			<td><a href="{% url 'index' %}">사실 우린 저번주까지 해서 이거 한번쯤 구현 다 해봤잖아요</a></td>
+			<td>2017-07-16</td>
+			<td> 0 </td>
+		</tr>
+
+		<tr>
+			<th scope="row"> 3 </th>
+			<td><a href="{% url 'index' %}">그게 편하면 그거 쓰세요</a></td>
+			<td>2017-07-15</td>
+			<td> 0 </td>
+		</tr>
+		<tr>
+			<th scope="row"> 2 </th>
+			<td><a href="{% url 'index' %}">셀마다 제목 다르게 하려니 되게 힘드네요</a></td>
+			<td>2017-07-14</td>
+			<td> 0 </td>
+		</tr>
+		<tr>
+			<th scope="row"> 1 </th>
+			<td><a href="{% url 'index' %}">원래 post_detail도 만들려고 했는데 미친 짓이었나봐요</a></td>
+			<td>2017-07-13</td>
+			<td> 0 </td>
+		</tr>
+
+
+	</tbody>
+
+</table>
+
+
+
+</article>
+
+
+{% endblock %}
